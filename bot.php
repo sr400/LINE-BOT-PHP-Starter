@@ -21,9 +21,13 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 
 			if ($text=='หมี'){
-				$reply_text = 'อยู่ครับ';
-			}elseif ($text=='หมี: กินอะไร'){
+				$reply_text = 'ครับ';
+			}elseif ($text=='หมี:กินอะไร'){
 				$reply_text = 'กินหมูครับ';
+			}elseif ($text=='หมี:น้ำล่ะ'){
+				$reply_text = 'โค้ก';
+			}elseif ($text=='หมี:อุณหภูมิ'){
+				$reply_text = '24 องศา';								
 			}else{
 				$reply_text = 'นอนๆ';
 			}
