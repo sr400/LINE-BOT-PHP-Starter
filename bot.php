@@ -20,10 +20,12 @@ if (!is_null($events['events'])) {
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 
-			if ($text=='d'){
-				$reply_text = 'D Pong';
+			if ($text=='หมี'){
+				$reply_text = 'อยู่ครับ';
+			}elseif ($text=='หมี: กินอะไร'){
+				$reply_text = 'กินหมูครับ';
 			}else{
-				$reply_text = 'Saaad';
+				$reply_text = 'นอนๆ';
 			}
 
 			// Build message to reply back
