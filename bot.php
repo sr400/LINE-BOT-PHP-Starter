@@ -20,10 +20,16 @@ if (!is_null($events['events'])) {
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 
+			if ($text=='d'){
+				$reply_text = 'D Pong';
+			}else{
+				$reply_text = 'Saaad';
+			}
+
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
-				'text' => $text
+				'text' => $reply_text
 			];
 
 			// Make a POST Request to Messaging API to reply to sender
