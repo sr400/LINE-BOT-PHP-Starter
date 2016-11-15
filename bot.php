@@ -21,21 +21,28 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 
 			if ($text=='หมี'){
-				$reply_text = 'ครับ';
+				$replyText = 'ครับ';
 			}elseif ($text=='หมี:กินอะไร'){
-				$reply_text = 'กินหมูครับ';
+				$replyText = 'กินหมูครับ';
 			}elseif ($text=='หมี:น้ำล่ะ'){
-				$reply_text = 'โค้ก';
+				$replyText = 'โค้ก';
 			}elseif ($text=='หมี:อุณหภูมิ'){
-				$reply_text = '24 องศา';								
+				$replyText = '24 องศา';								
 			}else{
-				$reply_text = 'นอนๆ';
+				$replyText = 'นอนๆ';
 			}
 
 			// Build message to reply back
-			$messages = [
+			$messages1 = [
 				'type' => 'text',
-				'text' => $reply_text
+				'text' => $replyText
+			];
+
+			$messages = [
+			    "id" => "325708",
+			    "type" => "sticker",
+			    "packageId" => "1",
+			    "stickerId" => "1"
 			];
 
 			// Make a POST Request to Messaging API to reply to sender
